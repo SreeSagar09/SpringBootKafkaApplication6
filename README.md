@@ -1,0 +1,1 @@
+A kafka application, with manual committing of offsets in spring boot:

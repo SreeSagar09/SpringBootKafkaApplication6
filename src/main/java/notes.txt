@@ -1,0 +1,38 @@
+A kafka application, with manual committing of offsets in spring boot:
+Programs:
+* SpringBootKafkaApplication6Application.java
+* KafkaConsumerConfig.java
+* OrderCotroller.java
+* Order.java
+* KafkaOrderConsumerService.java
+* KafkaOrderConsumerServiceImpl.java
+* KafkaOrderProducerService.java
+* KafkaOrderProducerServiceImpl.java
+Notes:
+* The Acknowledgment interface used to manual committing of kafka offsets.
+* The implement manual committing of offsets, setup below configurations:
+1. Set 'spring.kafka.consumer.enable-auto-commit' property as false.
+2. Configure listener acknowledgement AckMode to manual.
+3. Configure 'containerFactory' attribute in @KafkaListener annotation.
+* The 'acknowledge' method is used to commit the offsets manually.
+* The 'nack' overloaded methods are used to delaying the commit a specific time or retry after specific time.
+* Different acknowledgement modes:
+1. AckMode.RECORD - Commit offset after every message, it is high safety but slow when more commits.
+2. AckMode.BATCH - Commit offset after poll, it is a default mode and it is very fast.
+3. AckMode.TIME - Commit offsets after particular time interval, and we have to set the time by using 'setAckTime' method.
+4. AckMode.COUNT - Commit offsets after number of message processed, and we have set the count by using 'setAckCount' method.
+5. AckMode.COUNT_TIME - commit offsets after number of message processed or after particular time interval.
+6. AckMode.MANUAL - Commit offset manually, by using 'acknowledge' method.
+&. AckMode.MANUAL_IMMEDIATE - Commit offset instantly.
+Output:
+To place order rest end point:
+http://localhost:8080/SpringBootKafkaApplication6/order/placeOrder
+
+Order [orderId=1525580925475400, orderName=Food Order, items=[Dosha, Idli], orderDate=Sat Dec 20 12:16:50 IST 2025, deliverTo=Hi-tech city, Hyderabad, TS, 500081, orderProcessedBy=processOrder1[group-1]]
+Acknowledgment for order-topic-1@2
+Order [orderId=1525596376120500, orderName=Food Order, items=[Dosha, Idli], orderDate=Sat Dec 20 12:17:05 IST 2025, deliverTo=Hi-tech city, Hyderabad, TS, 500081, orderProcessedBy=processOrder1[group-1]]
+Acknowledgment for order-topic-2@2
+Order [orderId=1525598982596600, orderName=Food Order, items=[Dosha, Idli], orderDate=Sat Dec 20 12:17:08 IST 2025, deliverTo=Hi-tech city, Hyderabad, TS, 500081, orderProcessedBy=processOrder1[group-1]]
+Acknowledgment for order-topic-1@3
+Order [orderId=1525606508729900, orderName=Food Order, items=[Dosha, Idli], orderDate=Sat Dec 20 12:17:16 IST 2025, deliverTo=Hi-tech city, Hyderabad, TS, 500081, orderProcessedBy=processOrder1[group-1]]
+Acknowledgment for order-topic-0@1
