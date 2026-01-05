@@ -8,6 +8,7 @@ Programs:
 * KafkaOrderConsumerServiceImpl.java
 * KafkaOrderProducerService.java
 * KafkaOrderProducerServiceImpl.java
+* CommonUtil.java
 Notes:
 * The Acknowledgment interface used to manual committing of kafka offsets.
 * The implement manual committing of offsets, setup below configurations:
