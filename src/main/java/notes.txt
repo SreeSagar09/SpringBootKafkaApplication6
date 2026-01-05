@@ -28,11 +28,13 @@ Output:
 To place order rest end point:
 http://localhost:8080/SpringBootKafkaApplication6/order/placeOrder
 
-Order [orderId=1525580925475400, orderName=Food Order, items=[Dosha, Idli], orderDate=Sat Dec 20 12:16:50 IST 2025, deliverTo=Hi-tech city, Hyderabad, TS, 500081, orderProcessedBy=processOrder1[group-1]]
-Acknowledgment for order-topic-1@2
-Order [orderId=1525596376120500, orderName=Food Order, items=[Dosha, Idli], orderDate=Sat Dec 20 12:17:05 IST 2025, deliverTo=Hi-tech city, Hyderabad, TS, 500081, orderProcessedBy=processOrder1[group-1]]
-Acknowledgment for order-topic-2@2
-Order [orderId=1525598982596600, orderName=Food Order, items=[Dosha, Idli], orderDate=Sat Dec 20 12:17:08 IST 2025, deliverTo=Hi-tech city, Hyderabad, TS, 500081, orderProcessedBy=processOrder1[group-1]]
-Acknowledgment for order-topic-1@3
-Order [orderId=1525606508729900, orderName=Food Order, items=[Dosha, Idli], orderDate=Sat Dec 20 12:17:16 IST 2025, deliverTo=Hi-tech city, Hyderabad, TS, 500081, orderProcessedBy=processOrder1[group-1]]
+Order [orderId=16c4ed3d-61a4-4013-ad32-d140f1cc1e52, orderName=Food Order, items=[Dosha, Vada], orderDate=Mon Jan 05 21:43:37 IST 2026, deliverTo=Hi-tech city, Hyderabad, Telangana, 500081, orderProcessedBy=processOrder1[group-1]]
 Acknowledgment for order-topic-0@1
+Order [orderId=314ccf58-a75d-47fe-9cc2-c53ab7aded95, orderName=Food Order, items=[Dosha, Vada], orderDate=Mon Jan 05 21:43:41 IST 2026, deliverTo=Hi-tech city, Hyderabad, Telangana, 500081, orderProcessedBy=processOrder1[group-1]]
+Acknowledgment for order-topic-1@1
+Order [orderId=1f13d365-22fb-4e0d-a66a-6670f565c15d, orderName=Food Order, items=[Dosha, Vada], orderDate=Mon Jan 05 21:43:43 IST 2026, deliverTo=Hi-tech city, Hyderabad, Telangana, 500081, orderProcessedBy=processOrder1[group-1]]
+Acknowledgment for order-topic-2@1
+Order [orderId=a6da3d0a-40f8-4451-85cd-d653617aaa97, orderName=Food Order, items=[Dosha, Vada], orderDate=Mon Jan 05 21:43:44 IST 2026, deliverTo=Hi-tech city, Hyderabad, Telangana, 500081, orderProcessedBy=processOrder1[group-1]]
+Acknowledgment for order-topic-0@2
+Order [orderId=fa953e80-bdc4-4b20-92b1-5963e51e60a8, orderName=Food Order, items=[Dosha, Vada], orderDate=Mon Jan 05 21:43:46 IST 2026, deliverTo=Hi-tech city, Hyderabad, Telangana, 500081, orderProcessedBy=processOrder1[group-1]]
+Acknowledgment for order-topic-0@3

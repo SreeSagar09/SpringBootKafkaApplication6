@@ -7,6 +7,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 import com.app.model.Order;
+import com.app.util.CommonUtil;
 
 @Service
 public class KafkaOrderProducerServiceImpl implements KafkaOrderProducerService {
@@ -18,7 +19,7 @@ public class KafkaOrderProducerServiceImpl implements KafkaOrderProducerService 
 	public boolean placeOrder(Order order) {
 		
 		try {
-			order.setOrderId(String.valueOf(System.nanoTime()));
+			order.setOrderId(CommonUtil.generateOrderId());
 			order.setOrderDate(new Date());
 			
 			kafaKafkaTemplate.send("order-topic", order.getOrderId(), order);
